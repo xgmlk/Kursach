@@ -1,0 +1,33 @@
+body,html {
+    height: 99%;
+    width: 99%;
+}
+
+header{
+    position: relative;
+    height: 50%;
+    background-color: rgb(116, 116, 116);
+}
+
+.checkbtn{
+    position: relative;
+    left: 40%;
+    top: 20%;
+    padding: 5% 10% 5% 10%;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+div{
+    background-color: black;
+    top: 2%;
+    border:3px solid burlywood;
+    position: relative;
+    /* width: 10%; */
+    /* left: 45%; */
+    margin: 0;
+}
+
+.for{
+background-color: rgb(121, 119, 45);
+}

@@ -562,7 +562,7 @@ let ans = prompt('' , ''),
     arrr = [];
 
 arrr = ans.split(' ');
-console.log(arrr)
+console.log(arrr);
 
 // таким образом если пользователь введет в prompt
 // данные через запятую . тогда мы получим в массив arrr
@@ -604,3 +604,55 @@ let eee = [1 ,15 , 4],
 console.log(r);
 //функцию norm передаем в sort (БЕЗ КРУГЛЫХ СКОБОК ПОТОМУЧТО МЫ ЕЕ ПЕРЕДАЕМ
 // А НЕ ВЫЗЫВАЕМ)
+
+//объектно ориентированное программирование
+let soldier = {
+    health: 400,
+    armor: 100
+};
+
+let John = {
+    health:100
+};
+
+//прототип john это soldier
+//если не будет этой строчки . тогда soldier не будет прототипом john
+//и тогда john не будет наследовать его armor 
+John.__proto__ = soldier;
+
+console.log(John);
+console.log(John.armor);
+
+//доставание элементов из html страницы
+
+let checkbox = document.getElementById('checkbox');
+
+console.log(checkbox);
+
+//по тегам
+//берет сразу все такие же теги(все div)
+
+let cent = document.getElementsByTagName('div');
+
+console.log(cent[0])
+console.log(cent[1])
+console.log(cent[2])
+
+//по классу
+
+let four = document.getElementsByClassName('for');
+
+console.log(four[1])
+
+//можно задать любой элемент через селектор
+
+let all = document.querySelectorAll('#in #three');
+
+console.log(all[0]);
+
+//тоже самое только при помощит него получаем только первый
+//элемент на странице
+
+let notall = document.querySelector('.for');
+
+console.log(notall);
