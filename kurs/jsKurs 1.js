@@ -634,9 +634,8 @@ console.log(checkbox);
 
 let cent = document.getElementsByTagName('div');
 
-console.log(cent[0])
-console.log(cent[1])
-console.log(cent[2])
+console.log(cent)
+
 
 //по классу
 
@@ -656,3 +655,63 @@ console.log(all[0]);
 let notall = document.querySelector('.for');
 
 console.log(notall);
+
+checkbox.style.backgroundColor = 'blue';
+
+checkbox.style.borderRadius = '100%';
+
+let hood = document.querySelectorAll('#hooder');
+
+hood[0].style.backgroundColor = 'red';
+
+console.log(hood[0]);
+
+
+//работает всегда но след способ лучше
+// for (let i = 0; i < cent.length; i++) {
+//     cent[i].style.borderRadius = '100%'
+// };
+
+//этот способ работает только через queryselectorall
+let divs = document.querySelectorAll('div')
+
+divs.forEach(function(item, i, divss) {
+    item.style.borderRadius = '100%';
+});
+
+
+//создание элемента
+
+let div = document.createElement('div');
+console.log(div);
+
+let text = document.createTextNode('sosaaaat');
+console.log(text);
+
+//действия с классами в CSS
+//добавили для сзоданного div класс black
+div.classList.add('black');
+//вставили div  в конец body
+// document.body.appendChild(div);
+
+
+//второй пример вставили в конец hooder
+let hooder = document.querySelectorAll('.hoder');
+
+hooder[0].appendChild(div);
+
+//первый параментр означает какой элемент мы ставить 
+//а второй параметр перед чем мы его ставим
+document.body.insertBefore(div, div[1]);
+//удавили первый элемент div
+document.body.removeChild(div[0]);
+
+//замена одного элемента другим
+document.body.replaceChild(div[0], div[2]);
+
+//как добить текст или html код на страницу
+div.innerHTML = 'hello world XD'
+//добавить тегом
+div.innerHTML = '<h1>hello world XD</h1>'
+//чтобы получить 100% текст
+div.textContent = 'hello bit';
