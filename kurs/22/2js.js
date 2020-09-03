@@ -13,7 +13,7 @@ let btn = document.querySelectorAll('button'),
 
 btn.forEach(function(item, i , buttons) {
     // console.log(item);
-    item.style.borderRadius = '100%';
+    item.style.borderRadius = '20%';
 });
 
 // btn[0].addEventListener('click', function(event) {
@@ -48,13 +48,75 @@ link.addEventListener('click', function(event) {
 
 });
 
-//красим кнопки при наведении и наоборот
+//красим кнопки при наведении и кликах
 btn.forEach(function(item) {
     item.addEventListener('mouseenter', function() {
-        item.style.backgroundColor = 'grey';
+        item.style.backgroundColor = 'rgb(95, 104, 45)';
     });
-    item.addEventListener('click', function() {
-        item.style.backgroundColor = 'white';
+    item.addEventListener('mousedown', function() {
+        item.style.backgroundColor = 'rgb(69, 97, 24)';
+    });
+    item.addEventListener('mouseup', function() {
+        item.style.backgroundColor = 'rgb(95, 104, 45)';
+    });
+    item.addEventListener('mouseleave', function() {
+        item.style.backgroundColor = 'rgb(188, 205, 90)';
     });
 });
+//синтаксис для setTimeout
+// setTimeout(func, delay);
 
+function sayHello() {
+    console.log('Hello World!');
+}
+
+// let timerId = setTimeout(sayHello, 2000);
+
+//отключение setTimeout
+// clearTimeout(timerId);
+
+
+//через каждые 2 секунды
+let timerId = setInterval(sayHello, 2000);
+clearInterval(timerId);
+
+//рекурсивный setTimeout
+let timer = setTimeout(function log() {
+    console.log('hello');
+    setTimeout(log, 2000);
+});
+
+clearTimeout(timer);
+
+let myStart = document.querySelector('#start'),
+    animBox = document.querySelector('#animBox');
+
+    function animation () {
+        let pos = 0;
+
+        let id = setInterval(frame, 10);
+        function frame () {
+            if (pos == 375) {
+                clearInterval(id);
+            } else {
+                pos++;
+                animBox.style.top = pos + 'px';
+                animBox.style.left = pos + 'px';
+            }
+        }
+    }
+    myStart.addEventListener('click', animation);
+
+
+    let btnAll = document.querySelector('.panel'),
+        btns = document.getElementsByTagName('button');
+
+        btnAll.addEventListener('click', function(event) {
+            if (event.target && event.target.tagName == 'BUTTON') {
+                console.log('HI loh!');
+            }
+        });
+
+        //кроме делигирования по tagName есть еще:
+        //classList.contains('first')
+        //matches('button.first')

@@ -1,0 +1,52 @@
+body, html {
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+main {
+    position: absolute;
+    height: 70%;
+    width: 90%;
+
+}
+
+button {
+    background-color: rgb(188, 205, 90);
+}
+
+#start{
+    position: absolute;
+    width: 15%;
+    height: 7%;
+    top: 2%;
+    left: 3%;
+}
+
+.border {
+    position: relative;
+    height: 500px;
+    width: 500px;
+    border: 5px solid brown;
+    top: 10%;
+}
+
+.panel {
+    position: relative;
+    top: 25%;
+    background-color: gray;
+    height: 15%;
+    width: 95%;
+}
+
+.panelBtn{
+    position: relative;
+    width: 20%;
+    height: 35%;
+    top: 30%;
+}
+
+.borderanim{
+    width: 25%;
+    height: 25%;
+    background-color: rgb(85, 173, 214);
+    position: relative;
+}
