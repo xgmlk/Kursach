@@ -93,8 +93,8 @@ let myStart = document.querySelector('#start'),
 
     function animation () {
         let pos = 0;
-
         let id = setInterval(frame, 10);
+        
         function frame () {
             if (pos == 375) {
                 clearInterval(id);
